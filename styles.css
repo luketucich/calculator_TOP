@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+    font-family: Helvetica, sans-serif;
+}
+
+#container {
+    height: 701px;
+    width: 337px;
+    border-radius: 60px;
+    border: solid 3px silver;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#buttonContainer {
+    margin-top: 264px;
+    width: 326px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.buttonRow {
+    display: flex;
+    padding: 6.5px;
+    justify-content: space-evenly;
+}
+
+.button{
+    background-color: white;
+    border-radius: 36px;
+    height: 62px;
+    width: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 31px;
+    font-weight: 300;
+}
+
+.light{
+    background-color: #a5a5a5;
+}
+
+.dark{
+    background-color: #333333;
+    color: #fbfbfb;
+
+}
+
+.orange{
+    background-color: #ff9e0b;
+    color: #fbfbfb;
+}
+
+/* Last Row */
+#rowFive {
+    gap: 1px;
+}
+
+#rightSide {
+    display: flex;
+}
+
+#wideButton {
+    width: 136px;
+}
+
+#zero {
+    position: absolute;
+    margin-right: 70px;
+}
+
+/* Home Bar */
+#homeBarContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#homeBar {
+    height: 3.3px;
+    width: 111px;
+    border-radius: 2px;
+    background-color: white;
+}
