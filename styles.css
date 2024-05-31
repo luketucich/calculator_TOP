@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +6,8 @@ body {
     justify-content: center;
     background-color: rgb(33, 33, 33);
     font-family: Helvetica, sans-serif;
+    font-size: 31px;
+    font-weight: 300;
 }
 
 #container {
@@ -41,23 +44,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 31px;
-    font-weight: 300;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
 }
 
 .light{
     background-color: #a5a5a5;
+    
+    &:hover{
+        filter: brightness(1.2);
+        cursor: pointer;
+    }
 }
 
 .dark{
     background-color: #333333;
     color: #fbfbfb;
 
+    &:hover{
+        filter: brightness(1.3);
+        cursor: pointer;
+    }
 }
 
 .orange{
     background-color: #ff9e0b;
     color: #fbfbfb;
+
+    &:hover{
+        filter: brightness(1.1);
+        cursor: pointer;
+    }
 }
 
 /* Last Row */
