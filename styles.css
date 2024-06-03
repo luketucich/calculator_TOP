@@ -45,9 +45,9 @@ body {
 /* Display */
 #displayContainer{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 220px;
+    width: 326px;
+    text-align: right;
+    margin-right: 65px;
     margin-top: 172px;    
 }
 
@@ -139,14 +139,10 @@ body {
     display: flex;
 }
 
-#wideButton {
-    width: 136px;
+#zero {
+    padding-right: 75px;
 }
 
-#zero {
-    position: absolute;
-    margin-right: 70px;
-}
 /*  */
 
 /* Home Bar */
