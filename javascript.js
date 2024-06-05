@@ -87,7 +87,43 @@ for (i of numberButtons) {
 
 // Add button is pressed
 addButton.addEventListener('click', function () {
-    if (isSelected == false) {
+    // If you subtract two numbers without hitting "=", then hit "+"
+    if (operator == "subtract" && isSelected == false) {
+        operator = "add";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = subtract(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        addButton.style.backgroundColor = "#ffd492";
+        // If you multiply two numbers without hitting "=", then hit "+"
+    } else if (operator == "multiply" && isSelected == false) {
+        operator = "add";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = multiply(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        addButton.style.backgroundColor = "#ffd492";
+        // If you divide two numbers without hitting "=", then hit "+"
+    } else if (operator == "divide" && isSelected == false) {
+        operator = "add";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = divide(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        addButton.style.backgroundColor = "#ffd492";
+    } else if (isSelected == false) {
         operator = "add";
         isSelected = true;
         addButton.style.backgroundColor = "#ffd492";
@@ -103,7 +139,7 @@ addButton.addEventListener('click', function () {
         subtractButton.style.backgroundColor = "#ff9e0b";
         multiplyButton.style.backgroundColor = "#ff9e0b";
         divideButton.style.backgroundColor = "#ff9e0b";
-
+        // You deselect add
     } else if (isSelected == true && operator == "add") {
         operator = "none";
         isSelected = false;
@@ -113,8 +149,44 @@ addButton.addEventListener('click', function () {
 
 // Subtract button is pressed
 subtractButton.addEventListener('click', function () {
-    // You select subtract when no operators are in use
-    if (isSelected == false) {
+    // If you add two numbers without hitting "=", then hit "-"
+    if (operator == "add" && isSelected == false) {
+        operator = "subtract";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = add(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        subtractButton.style.backgroundColor = "#ffd492";
+        // If you multiply two numbers without hitting "=", then hit "-"
+    } else if (operator == "multiply" && isSelected == false) {
+        operator = "subtract";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = multiply(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        subtractButton.style.backgroundColor = "#ffd492";
+        // If you multiply two numbers without hitting "=", then hit "-"
+    } else if (operator == "divide" && isSelected == false) {
+        operator = "subtract";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = divide(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        subtractButton.style.backgroundColor = "#ffd492";
+        // You select subtract when no operators are in use
+    } else if (isSelected == false) {
         operator = "subtract";
         isSelected = true;
         subtractButton.style.backgroundColor = "#ffd492";
@@ -122,7 +194,7 @@ subtractButton.addEventListener('click', function () {
 
         // You select subtract when an operator is in use
     } else if (isSelected == true && operator !== "subtract") {
-        // Makes current operator add
+        // Makes current operator subtract
         operator = "subtract";
         subtractButton.style.backgroundColor = "#ffd492";
 
@@ -141,8 +213,45 @@ subtractButton.addEventListener('click', function () {
 
 // Multiply button is pressed
 multiplyButton.addEventListener('click', function () {
-    // You select subtract when no operators are in use
-    if (isSelected == false) {
+    // If you add two numbers without hitting "=", then hit "x"
+    if (operator == "add" && isSelected == false) {
+        operator = "multiply";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = add(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        multiplyButton.style.backgroundColor = "#ffd492";
+        // If you subtract two numbers without hitting "=", then hit "x"
+    } else if (operator == "subtract" && isSelected == false) {
+        operator = "multiply";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = subtract(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        multiplyButton.style.backgroundColor = "#ffd492";
+        // If you divide two numbers without hitting "=", then hit "x"
+    } else if (operator == "divide" && isSelected == false) {
+        operator = "multiply";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = divide(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        multiplyButton.style.backgroundColor = "#ffd492";
+
+        // You select subtract when no operators are in use
+    } else if (isSelected == false) {
         operator = "multiply";
         isSelected = true;
         multiplyButton.style.backgroundColor = "#ffd492";
@@ -150,7 +259,7 @@ multiplyButton.addEventListener('click', function () {
 
         // You select subtract when an operator is in use
     } else if (isSelected == true && operator !== "multiply") {
-        // Makes current operator add
+        // Makes current operator multiply
         operator = "multiply";
         multiplyButton.style.backgroundColor = "#ffd492";
 
@@ -159,7 +268,7 @@ multiplyButton.addEventListener('click', function () {
         addButton.style.backgroundColor = "#ff9e0b";
         divideButton.style.backgroundColor = "#ff9e0b";
 
-        // You deselect subtract
+        // You deselect multiply
     } else if (isSelected == true && operator == "multiply") {
         operator = "none";
         isSelected = false;
@@ -169,8 +278,45 @@ multiplyButton.addEventListener('click', function () {
 
 // Divide button is pressed
 divideButton.addEventListener('click', function () {
-    // You select subtract when no operators are in use
-    if (isSelected == false) {
+    // If you add two numbers without hitting "=", then hit "/"
+    if (operator == "add" && isSelected == false) {
+        operator = "divide";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = add(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        divideButton.style.backgroundColor = "#ffd492";
+        // If you subtract two numbers without hitting "=", then hit "/"
+    } else if (operator == "subtract" && isSelected == false) {
+        operator = "divide";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = subtract(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        divideButton.style.backgroundColor = "#ffd492";
+        // If you divide two numbers without hitting "=", then hit "/"
+    } else if (operator == "multiply" && isSelected == false) {
+        operator = "divide";
+        isSelected = true;
+
+        secondNumber = Number(display.textContent)
+        var answer = multiply(firstNumber, secondNumber).toFixed(3);
+
+        display.textContent = answer;
+        firstNumber = Number(answer);
+
+        divideButton.style.backgroundColor = "#ffd492";
+
+        // You select subtract when no operators are in use
+    } else if (isSelected == false) {
         operator = "divide";
         isSelected = true;
         divideButton.style.backgroundColor = "#ffd492";
@@ -178,7 +324,7 @@ divideButton.addEventListener('click', function () {
 
         // You select subtract when an operator is in use
     } else if (isSelected == true && operator !== "divide") {
-        // Makes current operator add
+        // Makes current operator divide
         operator = "divide";
         divideButton.style.backgroundColor = "#ffd492";
 
@@ -187,7 +333,7 @@ divideButton.addEventListener('click', function () {
         addButton.style.backgroundColor = "#ff9e0b";
         multiplyButton.style.backgroundColor = "#ff9e0b";
 
-        // You deselect subtract
+        // You deselect divide
     } else if (isSelected == true && operator == "divide") {
         operator = "none";
         isSelected = false;
