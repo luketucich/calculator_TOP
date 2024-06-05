@@ -45,10 +45,16 @@ body {
 /* Display */
 #displayContainer{
     position: absolute;
-    width: 326px;
+    width: 275px;
     text-align: right;
-    margin-right: 65px;
-    margin-top: 172px;    
+    margin-right: 15px;
+    margin-top: 172px;
+    overflow-x: overlay;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    scrollbar-color: #a5a5a5 black;
+
 }
 
 #display{
